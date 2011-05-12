@@ -3,7 +3,7 @@
     <f:entry>
         <f:repeatable items="${instance.boxes ?: descriptor.defaultBoxes}" var="box" name="boxes" noAddButton="true">
             <table width="100%" padding="0">
-                <st:include page="config.jelly" from="${box}" it="${box}" optional="true"/>
+                <st:include page="config.jelly" class="${descriptor.boxClass}" it="${box}"/>
             </table>
         </f:repeatable>
     </f:entry>

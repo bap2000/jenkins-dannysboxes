@@ -73,6 +73,10 @@ public class BoxesBuilder extends Builder {
               new DannysCheckbox("choose me", true)  
             ) );
         }
+        
+        public Class<DannysCheckbox> getBoxClass() {
+            return DannysCheckbox.class;
+        }
     }
 }
 
