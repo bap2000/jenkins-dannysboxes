@@ -43,7 +43,7 @@ public class BoxesBuilder extends Builder {
         this.frontend = frontend;
     }
 
-    public boolean isMonolithic() {
+    public boolean getIsMonolithic() {
         return isMonolithic;
     }
 
