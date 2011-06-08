@@ -32,20 +32,39 @@ import java.util.Arrays;
  */
 public class BoxesBuilder extends Builder {
     
-    private final ArrayList<DannysCheckbox> boxes;
+    private final boolean isMonolithic;
+    private final ArrayList<DannysCheckbox> monolithic;
+    private final ArrayList<DannysCheckbox> frontend;
 
     @DataBoundConstructor
-    public BoxesBuilder(final ArrayList<DannysCheckbox> boxes) {
-        this.boxes = boxes;
+    public BoxesBuilder(final boolean isMonolithic, final ArrayList<DannysCheckbox> monolithic, final ArrayList<DannysCheckbox> frontend) {
+        this.isMonolithic = isMonolithic;
+        this.monolithic = monolithic;
+        this.frontend = frontend;
     }
 
-    public ArrayList<DannysCheckbox> getBoxes() {
-        return boxes;
+    public boolean isMonolithic() {
+        return isMonolithic;
+    }
+
+    public ArrayList<DannysCheckbox> getMonolithic() {
+        return monolithic;
+    }
+
+    public ArrayList<DannysCheckbox> getFrontend() {
+        return frontend;
+    }
+
+    private final boolean isBoxChecked(final String boxName) {
+        for (DannysCheckbox box : isMonolithic ? monolithic : frontend) {
+            if (boxName.equals(box.getName())) return box.isSelected();
+        }
+        return false;
     }
 
     @Override
     public boolean perform(AbstractBuild build, Launcher launcher, BuildListener listener) {
-        for (DannysCheckbox box : boxes)
+        for (DannysCheckbox box : isMonolithic ? monolithic : frontend)
             if (box.isSelected())
                 listener.getLogger().println("Someone chose box: " + box.getName() + "!");
         return true;
@@ -66,11 +85,19 @@ public class BoxesBuilder extends Builder {
             return "dannyD_ haz boxes!";
         }
 
-        public ArrayList<DannysCheckbox> getDefaultBoxes() {
+        public ArrayList<DannysCheckbox> getDefaultMonolithic() {
             return new ArrayList<DannysCheckbox> (Arrays.asList(
-              new DannysCheckbox("something", false),  
-              new DannysCheckbox("something else", false),  
-              new DannysCheckbox("choose me", true)  
+              new DannysCheckbox("something big", true),  
+              new DannysCheckbox("something else big", false),  
+              new DannysCheckbox("choose me I'm big", true)  
+            ) );
+        }
+        
+        public ArrayList<DannysCheckbox> getDefaultFrontend() {
+            return new ArrayList<DannysCheckbox> (Arrays.asList(
+              new DannysCheckbox("frontend option 1", false),  
+              new DannysCheckbox("frontend 2", false),  
+              new DannysCheckbox("You really want me", true)  
             ) );
         }
         
