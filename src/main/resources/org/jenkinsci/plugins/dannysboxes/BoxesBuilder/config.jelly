@@ -1,13 +1,21 @@
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
 
-    <f:entry title="${%Is Monolithic?}">
-        <f:checkbox field="isMonolithic"/>
+    <st:once>
+        <script type="text/javascript" src="${rootURL}/plugin/dannysboxes/js/checkboxes.js" />
+    </st:once>
+    
+    <f:entry title="${%Run Monolithic?}">
+        <input type="checkbox" name="_.isMonolithic" class="isMonolithic" checked="${instance.getIsMonolithic() ? 'true' : null}" onClick="db_showTestType(this);"/>
     </f:entry>
     <f:entry title="${%Monolithic}">
-        <f:repeatableProperty field="monolithic" default="${descriptor.defaultMonolithic}" noAddButton="true"/>
+         <f:repeatableProperty field="monolithic" default="${descriptor.defaultMonolithic}" noAddButton="true"/>
     </f:entry>
     <f:entry title="${%Frontend}">
-        <f:repeatableProperty field="frontend" default="${descriptor.defaultFrontend}" noAddButton="true"/>
+         <f:repeatableProperty field="frontend" default="${descriptor.defaultFrontend}" noAddButton="true"/>
     </f:entry>
+    
+    <script type="text/javascript">
+        db_init();
+    </script>
 
 </j:jelly>

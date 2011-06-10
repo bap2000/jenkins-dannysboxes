@@ -1,0 +1,2545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ROOT>
+
+<!--ISM Monolithic MO -->
+
+  <testsuite name="LDAPConfigurationTest" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>LDAP/Cx/configuration</folder>
+
+  </testsuite>
+
+  <testsuite name="LDAPProvisioningTest" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>LDAP/Cx/provisioning</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxauth_sso" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdatasso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxauthdata_imsaka" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdataimsaka</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxauthdata_nba" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdatanba</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxauthdata_imscave" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdataimscave</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxauthdatadigest3gpp" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdatadigest3gpp</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxauthdatagiba" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdatagiba</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxderegister_sso" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxderegistersso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxput_sso" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxputsso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_ggsnrestart" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_ggsnrestart</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_graceful_shutdown_ism" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_gracefulshutdown</folder>
+
+    <popscript>Services/Cx/test_files_gracefulshutdown/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxauthdata" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdata/src</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxderegister" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxderegister/src</folder>
+
+    <popscript>Services/Cx/test_files_cxderegister/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxderegister/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxlocationquery" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxlocationquery/src</folder>
+
+    <popscript>Services/Cx/test_files_cxlocationquery/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxlocationquery/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxlocationquery3gpp" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxlocationquery3gpp/src</folder>
+
+    <popscript>Services/Cx/test_files_cxlocationquery3gpp/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxlocationquery3gpp/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxpull" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxpull/src</folder>
+
+    <popscript>Services/Cx/test_files_cxpull/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxpull/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxpush" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxpush/src</folder>
+
+    <popscript>Services/Cx/test_files_cxpush/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxpush/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_hss_only_spts.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxput" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxput/src</folder>
+
+    <popscript>Services/Cx/test_files_cxput/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxput/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxputpull3gpp" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxputpull3gpp/src</folder>
+
+    <popscript>Services/Cx/test_files_cxputpull3gpp/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxputpull3gpp/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_hss_only_spts.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxquery" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxquery/src</folder>
+
+    <popscript>Services/Cx/test_files_cxquery/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxquery/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxquery3gpp" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxquery3gpp/src</folder>
+
+    <popscript>Services/Cx/test_files_cxquery3gpp/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxquery3gpp/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_zxauthdata" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_zxauthdata</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_sih_master_session_notification" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxsihmsnotif</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_sih_master_session_unsubs" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxsihmsunsubs</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_sso_prof_update" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxprofileupdatesso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_subscription_lost" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxsihsubslost</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_zxauth_sso" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_zxauthdatasso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_ism_tco" mode="mo">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>TCO/ts_ism_tco/src</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="DiameterSdaNotifTest" mode="mo">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_notif/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_hss_only_spts.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+<!-- ISM Frontend FE -->
+
+  <testsuite name="LDAPConfigurationTest" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>LDAP/Cx/configuration</folder>
+
+  </testsuite>
+
+  <testsuite name="ts_cxauthdata_nba" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdatanba</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxauthdata" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdata/src</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxauth_sso" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdatasso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxauthdata_imsaka" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdataimsaka</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxauthdata_imscave" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdataimscave</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxauthdatadigest3gpp" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdatadigest3gpp</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxauthdatagiba" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxauthdatagiba</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_zxauthdata" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_zxauthdata</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_zxauth_sso" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_zxauthdatasso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_sso_prof_update" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxprofileupdatesso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxput_sso" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxputsso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cxderegister_sso" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxderegistersso</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_sih_master_session_notification" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxsihmsnotif</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_sih_master_session_unsubs" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxsihmsunsubs</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_ggsnrestart" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_ggsnrestart</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_subscription_lost" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxsihsubslost</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxquery" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxquery/src</folder>
+
+    <popscript>Services/Cx/test_files_cxquery/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxquery/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxquery3gpp" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxquery3gpp/src</folder>
+
+    <popscript>Services/Cx/test_files_cxquery3gpp/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxquery3gpp/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxlocationquery" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxlocationquery/src</folder>
+
+    <popscript>Services/Cx/test_files_cxlocationquery/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxlocationquery/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxlocationquery3gpp" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxlocationquery3gpp/src</folder>
+
+    <popscript>Services/Cx/test_files_cxlocationquery3gpp/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxlocationquery3gpp/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxpull" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxpull/src</folder>
+
+    <popscript>Services/Cx/test_files_cxpull/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxpull/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxput" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxput/src</folder>
+
+    <popscript>Services/Cx/test_files_cxput/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxput/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxderegister" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxderegister/src</folder>
+
+    <popscript>Services/Cx/test_files_cxderegister/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxderegister/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxpush" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxpush/src</folder>
+
+    <popscript>Services/Cx/test_files_cxpush/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxpush/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_hss_only_spts.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_cx_load_sharing" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxloadsharing</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_redundant_be" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/ExtDb/test_files_redundantBe</folder>
+
+    <popscript>Services/ExtDb/test_files_redundantBe/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_graceful_shutdown" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_gracefulshutdown</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_cxputpull3gpp" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Cx/test_files_cxputpull3gpp/src</folder>
+
+    <popscript>Services/Cx/test_files_cxputpull3gpp/src/populator_diameter_vega.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/test_files_cxputpull3gpp/src/pop_conf_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_hss_only_spts.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_collisiondetection" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/ExtDb/test_files_collisiondetection/src</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_ism_tco" mode="fe">
+
+    <base>ISM</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>TCO/ts_ism_tco/src</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_dia_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+<!-- SDA Monolithic MO -->  
+
+  <testsuite name="DiameterSdaPullTest" mode="mo">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_pull/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_hss_only_spts.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="DiameterSdaSubsNotifTest" mode="mo">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_subsnotif/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="DiameterSdaUpdateTest" mode="mo">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_update/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_zh_gba" mode="mo">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_zh_gba</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter_zh.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="LDAPSdaTest" mode="mo">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>LDAP/Sh</folder>
+
+  </testsuite>
+
+  <testsuite name="LDAPZhTest" mode="mo">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>SDA</modules>
+
+    <activateModules>NO_ACTIVATION</activateModules>
+
+    <folder>LDAP/Zh</folder>
+
+  </testsuite>
+
+<!-- SDA Frontend FE -->
+
+  <testsuite name="LDAPSdaTest" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>LDAP/Sh</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="DiameterSdaUpdateTest" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_update/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="DiameterSdaPullTest" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_pull/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_hss_only_spts.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="DiameterSdaSubsNotifTest" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_subsnotif/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="DiameterSdaNotifTest" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_notif/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_hss_only_spts.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_collisiondetectionSh" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/ExtDb/test_files_collisiondetection_Sh/src</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_sh_load_sharing" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>ISM:SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_sh_loadsharing</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Sh/populators/populate_hss.csh IP_ADDR PORT</popscript>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="LDAPZhTest" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>SDA</modules>
+
+    <activateModules>NO_ACTIVATION</activateModules>
+
+    <folder>LDAP/Zh</folder>
+
+    <popscript>Services/Cx/LDAP/Configuration/pop_conf_ext_cudb.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_hss_zh_gba" mode="fe">
+
+    <base>SDA</base>
+
+    <genConfiguraModules>ISM:SDA:AVG</genConfiguraModules>
+
+    <modules>SDA:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>Services/Sh/test_files_zh_gba</folder>
+
+    <popscript>Services/Sh/populators/populate_diameter_zh.csh IP_ADDR PORT </popscript>
+
+    <popscript>../../../../avg_code/function_test/services/LDAP/pop_conf_ext_cudb_avg.csh IP_ADDR PORT EXT_IP_ADDR</popscript>
+
+  </testsuite>  
+
+<!-- AVG Monolithic MO -->
+
+  <testsuite name="ts_avg_provisioning" mode="mo">
+
+    <base>AVG</base>
+
+    <genConfiguraModules>ALL</genConfiguraModules>
+
+    <modules>AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>oam/ts_avg_provisioning</folder>
+
+  </testsuite>
+
+  <testsuite name="ts_avg_configuration" mode="mo">
+
+    <base>AVG</base>
+
+    <genConfiguraModules>ALL</genConfiguraModules>
+
+    <modules>AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>oam/ts_avg_configuration</folder>
+
+  </testsuite>
+
+<!-- WSM Monolithic MO --> 
+
+  <testsuite name="automatic_provisioning" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>autoprovisioning_reconfiguration/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -akaFastReauthEnabled -akaNumAvBackOrderentries 0 -akaTService 10 -simFastReauthEnabled -numUsersWlanAccess 10000 -deployment MO</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_eapaka_identityfast_reauth" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>eapaka_identityfast_reauth/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -preferredEapMethod AKA -akaNumAvRequested 3 -akaFastReauthEnabled -akaFastReauthEnabled -autoprovisioningEnabled -deployment MO -avSource HLR -clientHost IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="eapaka_temporaryIdentity" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>eapaka_temporaryIdentity/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -preferredEapMethod AKA -akaNumAvBackOrderentries 0 -akaTService 10 -autoprovisioningEnabled -deployment MO -clientHost IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_eapsim_identityfast_reauth" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>eapsim_identityfast_reauth/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -preferredEapMethod SIM -simFastReauthEnabled -autoprovisioningEnabled -deployment MO -clientHost IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="eapsim_temporaryIdentity" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>eapsim_temporaryIdentity/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -numUsersWlanAccess 10000 -autoprovisioningEnabled -simFastReauthEnabled -deployment MO -clientHost IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_ewas_configuration" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_wsm_config/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment MO</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_ewas_drafts" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_wsm_drafts/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment MO</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_ewas_provisioning" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_wsm_provisioning/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment MO</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_map_configuration" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_map_config/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment MO</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_radius_configuration" mode="mo">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_radius_config/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment MO</popscript>
+
+  </testsuite>
+
+<!-- WSM Frontend -->
+
+  <testsuite name="automatic_provisioning" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>autoprovisioning_reconfiguration/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -akaFastReauthEnabled -akaNumAvBackOrderentries 0 -akaTService 10 -simFastReauthEnabled -numUsersWlanAccess 10000 -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_eapaka_identityfast_reauth" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>eapaka_identityfast_reauth/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -preferredEapMethod AKA -akaNumAvRequested 3 -akaFastReauthEnabled -akaFastReauthEnabled -autoprovisioningEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="eapaka_temporaryIdentity" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>eapaka_temporaryIdentity/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -preferredEapMethod AKA -akaNumAvBackOrderentries 0 -akaTService 10 -autoprovisioningEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_eapsim_identityfast_reauth" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>eapsim_identityfast_reauth/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -preferredEapMethod SIM -simFastReauthEnabled -autoprovisioningEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="eapsim_temporaryIdentity" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>eapsim_temporaryIdentity/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -numUsersWlanAccess 10000 -autoprovisioningEnabled -simFastReauthEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_ewas_configuration" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_wsm_config/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_ewas_drafts" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_wsm_drafts/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_ewas_provisioning" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_wsm_provisioning/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_map_configuration" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_map_config/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+  <testsuite name="ldap_radius_configuration" mode="fe">
+
+    <base>WSM</base>
+
+    <genConfiguraModules>HSS_WSM</genConfiguraModules>
+
+    <modules>WSM</modules>
+
+    <activateModules>NO</activateModules>
+
+    <folder>ldap_radius_config/src</folder>
+
+    <popscript>common/scripts/configureHSS.sh -h IP_ADDR -autoprovisioningEnabled -deployment FE</popscript>
+
+  </testsuite>
+
+<!-- ESM Monolithic MO -->    
+
+  <testsuite name="ts_alarms_and_notif" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>oam/alarms</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>  
+
+  <testsuite name="ts_configuration" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>oam/configuration</folder>
+
+  </testsuite>
+
+  <testsuite name="ts_graceful_shutdown" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>oam/graceful_shutdown</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_provisioning" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>oam/provisioning</folder>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aAuthenticationInformation" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aAuthenticationInformation</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aCancelLocation" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aCancelLocation</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aInsertSubscriberData" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aInsertSubscriberData</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aNotify" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aNotify</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aPurge" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aPurge</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aReset" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aReset</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aUpdateLocation" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aUpdateLocation</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_esm_tco" mode="mo">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>TCO/ts_esm_tco/src</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT MONO EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+<!-- ESM Frontend FE -->
+
+  <testsuite name="ts_configuration" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>oam/configuration</folder>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aAuthenticationInformation" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AVG</genConfiguraModules>
+
+    <modules>ESM:AVG</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aAuthenticationInformation</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_avg_fe.csh IP_ADDR PORT</popscript>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+    <popscript>../tools/compile/testexec/pop_user_avg_fe.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aCancelLocation" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aCancelLocation</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aInsertSubscriberData" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aInsertSubscriberData</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aNotify" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aNotify</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aPurge" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aPurge</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aReset" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aReset</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aUdcNotifications" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aUdcNotifications</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_s6aUpdateLocation" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/s6a/s6aUpdateLocation</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_esm_tco" mode="fe">
+
+    <base>ESM</base>
+
+    <genConfiguraModules>HSS_ESM:AvgStub</genConfiguraModules>
+
+    <modules>ESM</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>TCO/ts_esm_tco/src</folder>
+
+    <popscript>../tools/compile/testexec/pop_conf_dia_esm.csh IP_ADDR PORT FALSE EXT_IP_ADDR</popscript>
+
+  </testsuite>
+
+<!-- SLF-Misc Monolithic MO -->  
+
+  <testsuite name="ts_slf_ldap_provisioning" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>ldap/test_files_ldap_provisioning/build</folder>
+
+    <popscript>setLicense.exp redirect IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_license" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>NO_ACTIVATION</activateModules>
+
+    <folder>services/test_files_slf_license/build</folder>
+
+  </testsuite>
+
+<!-- SLF-Redirect Monolithic MO -->   
+
+  <testsuite name="ts_slf_ldap_configuration" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>ldap/test_files_ldap_configuration/build</folder>
+
+    <popscript>setLicense.exp redirect IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dx" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dx/build</folder>
+
+    <popscript>setLicense.exp redirect IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dsh" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dsh/build</folder>
+
+    <popscript>setLicense.exp redirect IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dzx" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dzx/build</folder>
+
+    <popscript>setLicense.exp redirect IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dz" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dz/build</folder>
+
+    <popscript>setLicense.exp redirect IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_swx" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_swx/build</folder>
+
+    <popscript>setLicense.exp redirect IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+<!-- SLF-Proxy Monolithic MO -->
+
+  <testsuite name="ts_slf_ldap_configuration_proxy_mode" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>ldap/test_files_ldap_configuration_proxy_mode/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dbm IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_proxy_cx" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_proxy_cx/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dbm IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_proxy_gi" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_proxy_gi/build</folder>
+
+    <popscript>setLicense.exp rad_proxy_dia_dbm IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_radius_slf.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_proxy_s6a" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_proxy_s6a/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dbm IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_proxy_sh" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_proxy_sh/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dbm IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_proxy_zh" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_proxy_zh/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dbm IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_proxy_zx" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_proxy_zx/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dbm IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_proxy_swx" mode="mo">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_proxy_swx/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dbm IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+<!-- SLF-Proxy Frontend FO -->  
+
+  <testsuite name="ts_slf_ldap_configuration_dla_mode" mode="fe">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>ldap/test_files_ldap_configuration_dla_mode/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dla IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dla_cx" mode="fe">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dla_cx/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dla IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dla_gi" mode="fe">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dla_gi/build</folder>
+
+    <popscript>setLicense.exp rad_proxy_dia_dla IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_radius_slf.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dla_s6a" mode="fe">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dla_s6a/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dla IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dla_sh" mode="fe">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dla_sh/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dla IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dla_zh" mode="fe">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dla_zh/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dla IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dla_zx" mode="fe">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dla_zx/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dla IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+  <testsuite name="ts_slf_dla_swx" mode="fe">
+
+    <base>SLF</base>
+
+    <genConfiguraModules>SLF:HSI</genConfiguraModules>
+
+    <modules>SLF</modules>
+
+    <activateModules>YES</activateModules>
+
+    <folder>services/test_files_slf_dla_swx/build</folder>
+
+    <popscript>setLicense.exp dia_proxy_dla IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_performance.csh IP_ADDR PORT</popscript>
+
+    <popscript>services/ldap_config/pop_config_dia_slf_proxy_no_redirect.csh IP_ADDR PORT</popscript>
+
+  </testsuite>
+
+</ROOT>

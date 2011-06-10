@@ -1,0 +1,18 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+    <f:invisibleEntry>
+        <f:textbox name="name" value="${instance.name}"/>
+    </f:invisibleEntry>
+    <f:entry>
+        <a href="#undef" onclick="db_hideOrExpandModule(this); return false" class="moduleName">${instance.name}</a>
+    </f:entry>
+    <f:entry>
+        <a href="#undef" onclick="db_setall(this, true); return false" style="padding: 1em;" class="db-select-all-or-none">${%Select All}</a>
+        <f:nbsp/>
+        <a href="#undef" onclick="db_setall(this, false); return false" style="padding: 1em;" class="db-select-all-or-none">${%Select None}</a>
+    </f:entry>
+    <f:entry>
+         <f:repeatableProperty field="testCase" noAddButton="true"/> 
+    </f:entry>
+
+</j:jelly>

@@ -5,39 +5,30 @@ import hudson.Launcher;
 import hudson.model.AbstractBuild;
 import hudson.model.AbstractProject;
 import hudson.model.BuildListener;
+import hudson.model.Hudson;
 import hudson.tasks.BuildStepDescriptor;
 import hudson.tasks.Builder;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-/**
- * Sample {@link Builder}.
- *
- * <p>
- * When the user configures the project and enables this builder,
- * {@link DescriptorImpl#newInstance(StaplerRequest)} is invoked
- * and a new {@link BoxesBuilder} is created. The created
- * instance is persisted to the project configuration XML by using
- * XStream, so this allows you to use instance fields (like {@link #name})
- * to remember the configuration.
- *
- * <p>
- * When a build is performed, the {@link #perform(AbstractBuild, Launcher, BuildListener)}
- * method will be invoked. 
- *
- * @author Kohsuke Kawaguchi
- */
 public class BoxesBuilder extends Builder {
     
     private final boolean isMonolithic;
-    private final ArrayList<DannysCheckbox> monolithic;
-    private final ArrayList<DannysCheckbox> frontend;
+    private final ArrayList<Module> monolithic;
+    private final ArrayList<Module> frontend;
 
     @DataBoundConstructor
-    public BoxesBuilder(final boolean isMonolithic, final ArrayList<DannysCheckbox> monolithic, final ArrayList<DannysCheckbox> frontend) {
+    public BoxesBuilder(final boolean isMonolithic, final ArrayList<Module> monolithic, final ArrayList<Module> frontend) {
         this.isMonolithic = isMonolithic;
         this.monolithic = monolithic;
         this.frontend = frontend;
@@ -47,63 +38,89 @@ public class BoxesBuilder extends Builder {
         return isMonolithic;
     }
 
-    public ArrayList<DannysCheckbox> getMonolithic() {
+    public ArrayList<Module> getMonolithic() {
         return monolithic;
     }
 
-    public ArrayList<DannysCheckbox> getFrontend() {
+    public ArrayList<Module> getFrontend() {
         return frontend;
-    }
-
-    private final boolean isBoxChecked(final String boxName) {
-        for (DannysCheckbox box : isMonolithic ? monolithic : frontend) {
-            if (boxName.equals(box.getName())) return box.isSelected();
-        }
-        return false;
     }
 
     @Override
     public boolean perform(AbstractBuild build, Launcher launcher, BuildListener listener) {
-        for (DannysCheckbox box : isMonolithic ? monolithic : frontend)
-            if (box.isSelected())
-                listener.getLogger().println("Someone chose box: " + box.getName() + "!");
+        for (Module module : isMonolithic ? monolithic : frontend) {
+            for (DannysCheckbox box : module.getTestCase())
+                if (box.isSelected())
+                    listener.getLogger().println("run testcase: " + box.getName() + " (in module: " + module.getName() + ")");
+        }
         return true;
     }
 
-    @Override
     public DescriptorImpl getDescriptor() {
-        return (DescriptorImpl)super.getDescriptor();
+        return Hudson.getInstance().getDescriptorByType(DescriptorImpl.class);
     }
 
-    @Extension // This indicates to Jenkins that this is an implementation of an extension point.
+    @Extension
     public static final class DescriptorImpl extends BuildStepDescriptor<Builder> {
+        private transient Document masterTestSuite;
         public boolean isApplicable(Class<? extends AbstractProject> aClass) {
             return true;
         }
 
         public String getDisplayName() {
-            return "dannyD_ haz boxes!";
+            return Messages.displayName();
         }
 
-        public ArrayList<DannysCheckbox> getDefaultMonolithic() {
-            return new ArrayList<DannysCheckbox> (Arrays.asList(
-              new DannysCheckbox("something big", true),  
-              new DannysCheckbox("something else big", false),  
-              new DannysCheckbox("choose me I'm big", true)  
-            ) );
+        public ArrayList<Module> getDefaultMonolithic() {
+            return getModules("mo");
         }
         
-        public ArrayList<DannysCheckbox> getDefaultFrontend() {
-            return new ArrayList<DannysCheckbox> (Arrays.asList(
-              new DannysCheckbox("frontend option 1", false),  
-              new DannysCheckbox("frontend 2", false),  
-              new DannysCheckbox("You really want me", true)  
-            ) );
+        public ArrayList<Module> getDefaultFrontend() {
+            return getModules("fe");
         }
         
-        public Class<DannysCheckbox> getBoxClass() {
-            return DannysCheckbox.class;
+        public ArrayList<Module> getModules(final String mode) {
+            try {
+                return getModulesFor(mode);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (DocumentException e) {
+                throw new RuntimeException(e);
+            }
         }
+                
+        private ArrayList<Module> getModulesFor(final String mode) throws IOException, DocumentException {
+            final List<Node> testCases = getMasterTestSuite().selectNodes("//testsuite[@mode = '" + mode + "']", "@name");
+            final Map<String, Module> modules = new TreeMap<String, Module>();
+            for (Node testCase : testCases) {
+                final String moduleName = testCase.valueOf("base/text()");
+                Module module = modules.get(moduleName);
+                if (module == null) {
+                    module = new Module(moduleName, new ArrayList<DannysCheckbox>());
+                    modules.put(moduleName, module);
+                }
+                module.addTestCase(new DannysCheckbox(testCase.valueOf("@name"), true));
+            }
+            return new ArrayList<Module>(modules.values());
+        }
+        
+        private synchronized Document getMasterTestSuite() throws IOException, DocumentException {
+            if (masterTestSuite != null) return masterTestSuite;
+            final SAXReader reader = new SAXReader();
+            final InputStream sampleTestcase = getClass().getResourceAsStream("testcase.xml");
+            try {
+                masterTestSuite = reader.read(sampleTestcase);
+                return masterTestSuite;
+            } finally {
+                try {
+                    if (sampleTestcase != null) sampleTestcase.close();
+                } catch (IOException ioe) {
+                    ioe.printStackTrace();
+                }
+            }
+        }
+        
     }
+    
 }
 
